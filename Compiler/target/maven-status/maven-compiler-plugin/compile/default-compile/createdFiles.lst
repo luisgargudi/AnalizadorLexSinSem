@@ -1,0 +1,4 @@
+com\compiler\compiler\CompiladorMain.class
+com\compiler\compiler\Controller.class
+module-info.class
+com\compiler\compiler\Tokens.class

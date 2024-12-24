@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.fxmisc.richtext.CodeArea?>
+<?import org.fxmisc.flowless.VirtualizedScrollPane?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.compiler.compiler.Controller">
+
+    <!-- Menú principal -->
+    <top>
+        <MenuBar styleClass="menu-bar">
+            <Menu text="File" styleClass="menu">
+                <MenuItem text="New" onAction="#NewFile"/>
+                <MenuItem text="Open..." onAction="#OpenFile"/>
+                <MenuItem text="Save" onAction="#SaveFile"/>
+                <MenuItem text="Close" onAction="#CloseFile"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Exit" fx:id="menuExit"/>
+            </Menu>
+            <Menu text="Edit" styleClass="menu">
+                <MenuItem text="Undo" fx:id="menuUndo"/>
+                <MenuItem text="Redo" fx:id="menuRedo"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Cut" fx:id="menuCut"/>
+                <MenuItem text="Copy" fx:id="menuCopy"/>
+                <MenuItem text="Paste" fx:id="menuPaste"/>
+            </Menu>
+            <Menu text="Compilar" styleClass="menu" >
+                <MenuItem text="Start" onAction="#Compile"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <!-- Área de texto enriquecida tipo código -->
+    <center>
+        <VirtualizedScrollPane  vbarPolicy="NEVER" hbarPolicy="NEVER">
+            <content>
+                <CodeArea styleClass="code-area" fx:id="CodeArea" />
+            </content>
+        </VirtualizedScrollPane>
+    </center>
+
+    <!-- Barra de estado en la parte inferior -->
+    <bottom>
+
+        <TextArea fx:id="consoleOutput" editable="false" wrapText="true"
+                  prefRowCount="5" styleClass="console-area" text=">"/>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,48 @@
+.keyword {
+    -fx-fill: #c53838;
+    -fx-font-weight: bold;
+}
+.semicolon {
+    -fx-fill: #eeeeee;
+    -fx-font-weight: bold;
+}
+
+.primitive-type
+{
+    -fx-fill: #ff8700;
+    -fx-font-weight: bold;
+}
+
+.normal-text {
+    -fx-fill: #eeeeee;
+}
+.bracket {
+    -fx-fill: #eeeeee;
+    -fx-font-weight: bold;
+}
+.brace {
+    -fx-fill: #eeeeee;
+    -fx-font-weight: bold;
+}
+.string {
+    -fx-fill: #6969ff;
+}
+.current-line {
+    -fx-background-color: #2b2b2b; /* Resalta la línea actual */
+}
+.comment {
+    -fx-fill: #6e6e6e;
+}
+
+.number {
+    -fx-fill: #ff2053;
+}
+
+.paragraph-box:has-caret {
+    -fx-border-color: #f2f9fc;
+
+}
+
+.code-area .caret {
+    -fx-stroke: #FF5733; /* Cambia el color del caret aquí */
+}
